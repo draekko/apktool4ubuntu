@@ -1,0 +1,9 @@
+#!/bin/bash
+cd /home
+for homedirs in *; do 
+  if [[ -d "$homedirs" && ! -L "$homedirs" ]]; then
+    rm -f $homedirs/Desktop/apktool.desktop
+    cp -f /opt/apktool/apktool.desktop $homedirs/Desktop/
+    chown $homedirs.$homedirs $homedirs/Desktop/apktool.desktop
+  fi; 
+done

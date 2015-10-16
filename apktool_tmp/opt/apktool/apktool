@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    FILENAME=`zenity --file-selection --file-filter="APK files (apk) | *.apk" --title="Select an APK file to extract" --filename=$HOME/`
+elif [ -e $1 ]; then
+    FILENAME=$1
+else
+    FILENAME=`zenity --file-selection --file-filter="APK files (apk) | *.apk" --title="Select an APK file to extract" --filename=$HOME/`
+fi
+
+APK=$FILENAME
+DIR="${APK%.*}"
+
+xterm -hold -e "rm -r \"$DIR\" > /dev/null ; java -jar /opt/apktool/apktool.jar d -o \"$DIR\" \"$APK\" ; echo \"done\""

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for homedirs in /home/*; do 
+  if [[ -d "$homedirs" && ! -L "$homedirs" ]]; then
+    rm -f $homedirs/Desktop/apktool.desktop
+  fi; 
+done
+
+rm -f /usr/share/applications/apktool.desktop
+rm -fr /opt/apktool

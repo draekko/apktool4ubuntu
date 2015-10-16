@@ -1,0 +1,18 @@
+Package: apktool
+Version: 2.0.2-ubuntu1
+Architecture: all
+Maintainer: Draekko <draekko@gdraekko>
+Depends: bash, xterm, zenity, openjdk-7-jdk | openjdk-8-jdk | oracle-7-java | oracle-8-java | oracle-9-java
+Section: Development;Application
+Priority: optional
+Homepage: https://ibotpeaches.github.io/Apktool/
+Description: A tool for reverse engineering 3rd party, closed, binary 
+  Android apps. It can decode resources to nearly original form and 
+  rebuild them after making some modifications; it makes possible to 
+  debug smali code step by step. Also it makes working with an app 
+  easier because of project-like file structure and automation of 
+  some repetitive tasks like building apk, etc.
+  .
+  It is NOT intended for piracy and other non-legal uses. It could 
+  be used for localizing, adding some features or support for custom 
+  platforms, analyzing applications and much more.
